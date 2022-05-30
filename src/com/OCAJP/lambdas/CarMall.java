@@ -14,10 +14,17 @@ class CarMall {
         cars.add(new Car("Nissan", 2017, 8000.0, "SUV"));
     }
 
-    public List<Car> showCars(CarFilter cf) {
+    public List<Car> showCars(CarFilter cf) { // passing the CarFilter interface to the showCars method.  CarFilter contains showCar method
+        // CarFilter is the target type of the lambda expression
+        // A lambda expression can be written only where the target type is
+        // an interface with exactly one abstract method.
+        // This is called a functional interface
+        // There are several functional interfaces in the java.util.function package.
         ArrayList<Car> carsToShow = new ArrayList<>();
         for (Car c : cars) {
-            if (cf.showCar(c)) carsToShow.add(c); // showCar method declared in the CarFilter interface
+            if (cf.showCar(c)) { // showCar method declared in the CarFilter interface
+                carsToShow.add(c);
+            }
         }
         return carsToShow;
     }

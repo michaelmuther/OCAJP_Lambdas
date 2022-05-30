@@ -24,6 +24,7 @@ public class TestClass {
 //        List<Car> carsByType = cm.showCars(tf);
         System.out.println(carsByCompany);
         System.out.println(carsByType);
+        System.out.println(carsByPrice);
         System.out.println(carsByMM);
     }
 }
